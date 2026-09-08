@@ -1,0 +1,99 @@
+import { describe, expect, it } from "vitest";
+import { approvedImageBank, imageForOffer } from "./imageBank";
+
+describe("approvedImageBank", () => {
+  it("associa os cinco destinos prioritários a imagens persistentes", () => {
+    expect(Object.keys(approvedImageBank)).toEqual(expect.arrayContaining([
+      "maceio-maragogi",
+      "trancoso",
+      "natal-pipa",
+      "jeri",
+      "florianopolis",
+      "gramado-canela",
+      "rio-classico",
+      "foz-iguacu",
+      "orlando-disney",
+      "paris",
+      "nova-york",
+      "portugal",
+      "miami",
+      "buenos-aires",
+      "cococay",
+      "maldivas",
+      "veneza",
+      "bora-bora",
+      "tokyo-gastro",
+      "universal",
+      "mediterraneo",
+      "alasca",
+      "noruega",
+      "bahamas",
+      "danubio",
+      "sapucai",
+      "veneza-carnaval",
+      "india",
+      "turquia",
+      "halong",
+      "minas",
+      "salvador-gastro",
+      "serra-gaucha-gastro",
+      "sawgrass",
+      "ny-black-friday",
+      "milao",
+      "panama",
+      "dubai-shopping",
+      "ciudad-este",
+      "milagres",
+      "monte-verde",
+      "noronha-romance",
+      "vinhedos",
+      "jeri-romance",
+      "petropolis",
+    ]));
+    expect(approvedImageBank["maceio-maragogi"]).toMatch(/^\/manus-storage\/.+\.jpg$/);
+    expect(approvedImageBank["gramado-canela"]).toMatch(/^\/manus-storage\/gramado-canela-editorial_.+\.jpg$/);
+    expect(approvedImageBank["rio-classico"]).toMatch(/^\/manus-storage\/rio-classico-editorial_.+\.jpg$/);
+    expect(approvedImageBank["foz-iguacu"]).toMatch(/^\/manus-storage\/foz-iguacu-editorial_.+\.jpg$/);
+    expect(approvedImageBank["orlando-disney"]).toMatch(/^\/manus-storage\/orlando-disney-editorial_.+\.jpg$/);
+    expect(approvedImageBank.paris).toMatch(/^\/manus-storage\/paris-editorial_.+\.jpg$/);
+    expect(approvedImageBank["nova-york"]).toMatch(/^\/manus-storage\/nova-york-editorial_.+\.jpg$/);
+    expect(approvedImageBank.portugal).toMatch(/^\/manus-storage\/lisboa-porto-editorial_.+\.jpg$/);
+    expect(approvedImageBank.miami).toMatch(/^\/manus-storage\/miami-editorial_.+\.jpg$/);
+    expect(approvedImageBank["buenos-aires"]).toMatch(/^\/manus-storage\/buenos-aires-editorial_.+\.jpg$/);
+    expect(approvedImageBank.cococay).toMatch(/^\/manus-storage\/cococay-caribe-editorial_.+\.jpg$/);
+    expect(approvedImageBank.maldivas).toMatch(/^\/manus-storage\/maldivas-editorial_.+\.jpg$/);
+    expect(approvedImageBank.veneza).toMatch(/^\/manus-storage\/veneza-editorial_.+\.jpg$/);
+    expect(approvedImageBank["bora-bora"]).toMatch(/^\/manus-storage\/bora-bora-editorial_.+\.jpg$/);
+    expect(approvedImageBank["tokyo-gastro"]).toMatch(/^\/manus-storage\/toquio-editorial_.+\.jpg$/);
+    expect(approvedImageBank.universal).toMatch(/^\/manus-storage\/universal-orlando-editorial_.+\.jpg$/);
+    expect(approvedImageBank.mediterraneo).toMatch(/^\/manus-storage\/mediterraneo-editorial_.+\.jpg$/);
+    expect(approvedImageBank.alasca).toMatch(/^\/manus-storage\/alasca-editorial_.+\.jpg$/);
+    expect(approvedImageBank.noruega).toMatch(/^\/manus-storage\/noruega-editorial_.+\.jpg$/);
+    expect(approvedImageBank.bahamas).toMatch(/^\/manus-storage\/bahamas-cruzeiro-editorial_.+\.jpg$/);
+    expect(approvedImageBank.danubio).toMatch(/^\/manus-storage\/danubio-editorial_.+\.jpg$/);
+    expect(approvedImageBank.sapucai).toMatch(/^\/manus-storage\/sapucai-editorial_.+\.jpg$/);
+    expect(approvedImageBank["veneza-carnaval"]).toMatch(/^\/manus-storage\/veneza-carnaval-editorial_.+\.jpg$/);
+    expect(approvedImageBank.india).toMatch(/^\/manus-storage\/taj-mahal-amanhecer-editorial_.+\.jpg$/);
+    expect(approvedImageBank.turquia).toMatch(/^\/manus-storage\/capadocia-baloes-editorial_.+\.jpg$/);
+    expect(approvedImageBank.halong).toMatch(/^\/manus-storage\/halong-bay-cruzeiro-editorial_.+\.jpg$/);
+    expect(approvedImageBank.minas).toMatch(/^\/manus-storage\/section11-minas\.jpg_.+\.png$/);
+    expect(approvedImageBank["salvador-gastro"]).toMatch(/^\/manus-storage\/section11-salvador\.jpg_.+\.png$/);
+    expect(approvedImageBank["serra-gaucha-gastro"]).toMatch(/^\/manus-storage\/section11-serra\.jpg_.+\.png$/);
+    expect(approvedImageBank.sawgrass).toMatch(/^\/manus-storage\/section12-sawgrass_.+\.png$/);
+    expect(approvedImageBank["ny-black-friday"]).toMatch(/^\/manus-storage\/section12-new-york_.+\.png$/);
+    expect(approvedImageBank.milao).toMatch(/^\/manus-storage\/section12-milao_.+\.png$/);
+    expect(approvedImageBank.panama).toMatch(/^\/manus-storage\/section12-panama_.+\.png$/);
+    expect(approvedImageBank["dubai-shopping"]).toMatch(/^\/manus-storage\/section12-dubai_.+\.png$/);
+    expect(approvedImageBank["ciudad-este"]).toMatch(/^\/manus-storage\/section12-ciudad-este_.+\.png$/);
+    expect(approvedImageBank.milagres).toMatch(/^\/manus-storage\/section08-milagres_.+\.png$/);
+    expect(approvedImageBank["monte-verde"]).toMatch(/^\/manus-storage\/section08-monte-verde_.+\.png$/);
+    expect(approvedImageBank["noronha-romance"]).toMatch(/^\/manus-storage\/section08-noronha_.+\.png$/);
+    expect(approvedImageBank.vinhedos).toMatch(/^\/manus-storage\/section08-vinhedos_.+\.png$/);
+    expect(approvedImageBank["jeri-romance"]).toMatch(/^\/manus-storage\/section08-jeri_.+\.png$/);
+    expect(approvedImageBank.petropolis).toMatch(/^\/manus-storage\/section08-petropolis_.+\.png$/);
+  });
+
+  it("usa a imagem original para destinos ainda não migrados", () => {
+    expect(imageForOffer("destino-pendente", "https://example.com/fallback.jpg")).toBe("https://example.com/fallback.jpg");
+  });
+});
