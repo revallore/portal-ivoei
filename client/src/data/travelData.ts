@@ -51,7 +51,7 @@ export const travelCategories: TravelCategory[] = [
         inclusions: "Voo direto · Resort frente mar · Passeio de jangada incluso · Valor por pessoa",
         price: "R$ 1.890",
         installment: "10x de R$ 189",
-        image: "/manus-storage/ivoei-praias-brasil_b333b2db.jpg",
+        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=82",
       },
       {
         id: "maceio-maragogi",
@@ -193,7 +193,7 @@ export const travelCategories: TravelCategory[] = [
         inclusions: "Voo para São Luís · Transfer 4x4 · Pousada em Barreirinhas · Valor por pessoa",
         price: "R$ 1.890",
         installment: "10x de R$ 189",
-        image: "/manus-storage/ivoei-natureza-brasil_9470dd5d.jpg",
+        image: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=82",
       },
       {
         id: "bonito",
@@ -443,7 +443,7 @@ export const travelCategories: TravelCategory[] = [
         inclusions: "Cabine · Dia na ilha privativa · Bebidas selecionadas",
         price: "R$ 8.900",
         installment: "10x de R$ 890",
-        image: "/manus-storage/ivoei-cruzeiro-mediterraneo_11190f69.jpg",
+        image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=82",
       },
       {
         id: "mediterraneo",
@@ -541,7 +541,7 @@ export const travelCategories: TravelCategory[] = [
         inclusions: "Voo · Hotel On-Site · Park-to-Park Ticket",
         price: "R$ 8.500",
         installment: "10x de R$ 850",
-        image: "/manus-storage/ivoei-parques-orlando_59f62797.jpg",
+        image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=82",
       },
       {
         id: "disney",
