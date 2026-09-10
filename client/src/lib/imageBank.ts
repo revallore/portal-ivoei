@@ -53,6 +53,8 @@ export const approvedImageBank: Record<string, string> = {
   petropolis: "/manus-storage/section08-petropolis_6cfc0f84.png",
 };
 
+const activeStorageImageIds = new Set(["campos-festival", "laponia", "canastra", "mendoza-romance", "toscana"]);
+
 export function imageForOffer(id: string, fallback: string): string {
-  return approvedImageBank[id] ?? fallback;
+  return activeStorageImageIds.has(id) ? approvedImageBank[id] : fallback;
 }

@@ -13,11 +13,10 @@ import { matchesOffer, priceBands, travelStyles as styles, type PriceBand } from
 import { imageForOffer } from "@/lib/imageBank";
 import { parseWishlist, toggleWishlistId } from "@/lib/wishlist";
 
-const brandMark = "/manus-storage/ivoei-mark_1c626810.png";
-const heroImage = "/manus-storage/ivoei-hero-brazil_6f8b5b69.jpg";
+const heroImage = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=88";
 const immersionStories = [
-  { tag: "Expedição", title: "O silêncio que existe depois do mapa.", copy: "Rotas polares, navios menores e tempo suficiente para olhar de verdade.", image: "/manus-storage/ivoei-antarctica-expedition-editorial_e78512e0.jpg" },
-  { tag: "Cultura", title: "A cidade muda quando você a atravessa devagar.", copy: "Becos, rituais, mesas e histórias que não cabem num roteiro genérico.", image: "/manus-storage/ivoei-kyoto-culture-editorial_29aee091.jpg" },
+  { tag: "Expedição", title: "O silêncio que existe depois do mapa.", copy: "Rotas polares, navios menores e tempo suficiente para olhar de verdade.", image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=84" },
+  { tag: "Cultura", title: "A cidade muda quando você a atravessa devagar.", copy: "Becos, rituais, mesas e histórias que não cabem num roteiro genérico.", image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=84" },
 ];
 
 const intents = ["Viajar a dois", "Levar a família", "Viver um evento", "Mudar de perspectiva"];
@@ -38,7 +37,7 @@ function messageUrl(lead: Lead, selected?: Package) {
 }
 
 function IvoeiLogo() {
-  return <a href="#inicio" className="flex items-center gap-3" aria-label="IVOEI Turismo — início"><span className="flex h-12 w-12 items-center justify-center border border-[#123B36]/20 bg-white p-1.5"><img src={brandMark} alt="" className="h-full w-full object-contain" /></span><span><span className="ivoei-wordmark">IV<span className="ivoei-window-o"><span>O</span></span>EI</span><span className="mt-1 block text-[.54rem] font-extrabold tracking-[.3em] text-[#E76F51]">TURISMO</span></span></a>;
+  return <a href="#inicio" className="flex items-center gap-3" aria-label="IVOEI Turismo — início"><span className="flex h-12 w-12 items-center justify-center border border-[#123B36]/20 bg-white"><Plane className="h-6 w-6 text-[#E76F51]" aria-hidden="true" /></span><span><span className="ivoei-wordmark">IV<span className="ivoei-window-o"><span>O</span></span>EI</span><span className="mt-1 block text-[.54rem] font-extrabold tracking-[.3em] text-[#E76F51]">TURISMO</span></span></a>;
 }
 
 function PriceBlock({ route }: { route: Package }) {
