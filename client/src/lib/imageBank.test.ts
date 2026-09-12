@@ -6,7 +6,10 @@ describe("approvedImageBank", () => {
     const urls = Object.values(approvedImageBank);
     expect(urls.length).toBeGreaterThanOrEqual(50);
     expect(new Set(urls).size).toBe(urls.length);
-    expect(urls.every((url) => url.startsWith("https://images.unsplash.com/photo-"))).toBe(true);
+    expect(urls.every((url) => url.startsWith("https://images.unsplash.com/photo-") || url.startsWith("/manus-storage/"))).toBe(true);
+    expect(Object.keys(approvedImageBank)).toEqual(expect.arrayContaining([
+      "porto-de-galinhas", "maceio-maragogi", "trancoso", "natal-pipa", "jeri", "florianopolis",
+    ]));
   });
 
   it("usa a imagem original para destinos ainda não migrados", () => {
