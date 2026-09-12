@@ -25,7 +25,7 @@ export const approvedImageBank: Record<string, string> = {
   trancoso: "/manus-storage/ivoei-trancoso_ca9f4fa3.jpg",
   "natal-pipa": "/manus-storage/ivoei-natal-pipa_1248b6f3.jpg",
   jeri: "/manus-storage/ivoei-jeri_2c8a068d.jpg",
-  florianopolis: "/manus-storage/ivoei-florianopolis_7a5aeeb5.jpg",
+  florianopolis: "/manus-storage/ivoei-florianopolis_ddd4ff1f.jpg",
   "campos-festival": "https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1200&q=82",
   laponia: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=82",
   canastra: "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?auto=format&fit=crop&w=1200&q=82",
