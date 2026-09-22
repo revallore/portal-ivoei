@@ -48,6 +48,12 @@ export const approvedImageBank: Record<string, string> = {
   olimpia: "/manus-storage/ivoei-olimpia_56fae745.jpg",
   "hopi-hari": "/manus-storage/ivoei-hopi-hari_50f0a3b4.jpg",
   "arraial-parque": "/manus-storage/ivoei-arraial-parque_1182a9d1.jpg",
+  milagres: "/manus-storage/ivoei-milagres_9941f0cb.jpg",
+  "monte-verde": "/manus-storage/ivoei-monte-verde_24ec4686.jpg",
+  "noronha-romance": "/manus-storage/ivoei-noronha-romance_ab0c8761.jpg",
+  vinhedos: "/manus-storage/ivoei-vinhedos_a756fd99.jpg",
+  "jeri-romance": "/manus-storage/ivoei-jeri-romance_af346250.jpg",
+  petropolis: "/manus-storage/ivoei-petropolis_49b6a714.jpg",
   "mendoza-romance": "https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?auto=format&fit=crop&w=1200&q=82",
   toscana: "https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1200&q=82",
   "santorini-romance": "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1200&q=82",
@@ -65,12 +71,6 @@ export const approvedImageBank: Record<string, string> = {
   panama: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1200&q=82",
   "dubai-shopping": "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=1200&q=82",
   "ciudad-este": "https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=1200&q=82",
-  milagres: "https://images.unsplash.com/photo-1525268323446-0505b6fe7778?auto=format&fit=crop&w=1200&q=82",
-  "monte-verde": "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=1200&q=82",
-  "noronha-romance": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=82",
-  vinhedos: "https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1200&q=82",
-  "jeri-romance": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=82",
-  petropolis: "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=82",
 };
 
 const activeStorageImageIds = new Set(Object.keys(approvedImageBank));
